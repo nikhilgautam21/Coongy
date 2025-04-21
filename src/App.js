@@ -269,17 +269,21 @@ export default function AivoryLandingPage() {
       </Box>
 
       {/* FAQ */}
-      <Box
-        id="faq"
-        py={10}
-        textAlign="center"
-        bgcolor="#f9fafb"
-        sx={{ display: "flex", justifyContent: "center" }}
-      >
+      <Box id="faq" py={10} textAlign="center" bgcolor="#f9fafb">
         <Typography variant="h5" fontWeight="600" mb={6}>
           FAQs
         </Typography>
-        <Box maxWidth="lg" mx="auto" px={3} textAlign="left">
+        <Box
+          maxWidth="lg"
+          mx="auto"
+          px={3}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           {[
             [
               "Do I need professional product photos?",
