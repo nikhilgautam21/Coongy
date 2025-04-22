@@ -138,6 +138,43 @@ export default function AivoryLandingPage() {
       </Box>
 
       {/* How It Works */}
+      <Box id="how" py={10} textAlign="center" bgcolor="white">
+        <Typography variant="h5" fontWeight="600" mb={6}>
+          How AIvory Works
+        </Typography>
+        <Box
+          display="grid"
+          gridTemplateColumns={{ xs: "1fr", md: "repeat(3, 1fr)" }}
+          gap={4}
+          px={{ xs: 3, md: 10 }}
+        >
+          {[
+            [
+              "1. Upload Product Photos",
+              "Send us clean images — even smartphone clicks work.",
+            ],
+            [
+              "2. Select Visual Style",
+              "Choose models, environments, or concepts.",
+            ],
+            [
+              "3. Receive Stunning Visuals",
+              "Get high-res AI-generated images in 24–72 hrs.",
+            ],
+          ].map(([title, desc], i) => (
+            <Card key={i} sx={{ p: 3 }}>
+              <CardContent>
+                <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
+                  {title}
+                </Typography>
+                <Typography color="textSecondary">{desc}</Typography>
+              </CardContent>
+            </Card>
+          ))}
+        </Box>
+      </Box>
+
+      {/* Real Output */}
       <Box
         id="sample"
         py={10}
@@ -248,99 +285,6 @@ export default function AivoryLandingPage() {
           </Box>
         </Box>
       </Box>
-
-      {/* Real Output */}
-      <Box
-        id="sample"
-        py={10}
-        textAlign="center"
-        bgcolor="white"
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <Typography variant="h5" fontWeight="600" mb={6}>
-          Real Output from AIvory
-        </Typography>
-
-        <Box
-          display="flex"
-          flexDirection="row"
-          alignItems="center"
-          justifyContent="center"
-          gap={6}
-          flexWrap="wrap"
-        >
-          {/* Product Image */}
-          <Box display="flex" flexDirection="column" alignItems="center">
-            <img
-              src={aivorySampleOutputPics[0].image}
-              alt="Product"
-              loading="lazy"
-              style={{
-                width: "200px",
-                height: "200px",
-                objectFit: "cover",
-                borderRadius: 8,
-                marginBottom: 8,
-              }}
-            />
-            <Typography variant="h6" fontWeight="500" align="center">
-              {aivorySampleOutputPics[0].text}
-            </Typography>
-          </Box>
-
-          {/* Arrow */}
-          <ArrowForwardIcon sx={{ fontSize: 50, color: "gray" }} />
-
-          {/* Result Images Grouped */}
-          <Box
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            gap={2}
-          >
-            <Box display="flex" gap={2}>
-              {[aivorySampleOutputPics[1], aivorySampleOutputPics[2]].map(
-                (item, i) => (
-                  <Box
-                    key={i}
-                    display="flex"
-                    flexDirection="column"
-                    alignItems="center"
-                  >
-                    <img
-                      src={item.image}
-                      alt={item.text}
-                      loading="lazy"
-                      style={{
-                        width: "160px",
-                        height: "160px",
-                        objectFit: "cover",
-                        borderRadius: 8,
-                      }}
-                    />
-                    <Typography
-                      variant="body2"
-                      fontWeight="500"
-                      align="center"
-                      mt={1}
-                    >
-                      {item.text}
-                    </Typography>
-                  </Box>
-                )
-              )}
-            </Box>
-            <Typography variant="h6" fontWeight="500" align="center">
-              AIvory Results
-            </Typography>
-          </Box>
-        </Box>
-      </Box>
-
       {/* Benefits */}
       <Box id="why" py={10} textAlign="center" bgcolor="#f9fafb">
         <Typography variant="h5" fontWeight="600" mb={6}>
