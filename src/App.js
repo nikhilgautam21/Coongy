@@ -398,7 +398,7 @@ export default function AivoryLandingPage() {
         py={10}
         textAlign="center"
         bgcolor="#f9fafb"
-        sx={{ display: "flex", justifyContent: "center" }}
+        sx={{ display: "flex", justifyContent: "center", flexDirection: 'column' }}
       >
         <Typography variant="h5" fontWeight="600" mb={6}>
           FAQs
